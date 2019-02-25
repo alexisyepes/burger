@@ -5,16 +5,28 @@ body {
 }
 
 #burgerLogo {
-    width: 380px;
+    width: 420px;
     height: 350px;
 }
 
 #topContainer {
+    margin-top: 20px;
     font-family: 'Alfa Slab One', cursive;
     background-color: rgb(34, 3, 34);
     color: white;
     border-radius: 40px;
     border: 3px solid white;
+}
+
+#topRightBox {
+    text-align: center;
+}
+
+#burgerPic {
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 25px;
 }
 
 #addBurgerLabel {
@@ -50,6 +62,12 @@ body {
 
 #trashIcon {
     background-color: rgb(190, 74, 74);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#utensilsIcon {
+    background-color: rgb(216, 166, 74);
     padding: 10px;
     border-radius: 5px;
 }
@@ -94,3 +112,51 @@ body {
 #footerText {
         font-size: 20px;
 }
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    margin-top: 30px;  
+    color: white;  
+    text-align: center;  
+    background-color: #0e0f0f;
+    margin: auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+
+  #modalTitle {
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

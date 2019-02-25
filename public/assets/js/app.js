@@ -1,8 +1,8 @@
 $(document).ready(function () {
-   
+  
 
 $(function () {
-
+    
     // Add a new burger.
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
@@ -17,10 +17,11 @@ $(function () {
             type: "POST",
             data: newBurger
         }).then(function () {
-            alert("New Burger added to the Menu!")          
+            // alert("New Burger added to the Menu!")          
             console.log("Added new burger");
+
             // Reload the page to get the updated burger list.
-            location.reload();
+            setTimeout(function(){location.reload()}, 4000);
           
 
         });
@@ -57,5 +58,36 @@ $(function () {
     });
 
 })
+
+
+
+// Get the modal
+var modal = $("#myModal")[0];
+
+// Get the button that opens the modal
+var btn = $("#addburger")[0];
+
+// Get the <span> element that closes the modal
+var span = $(".close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+$('#mymodal').on('hidden.bs.modal', function() {
+    this.modal('show');
+  });
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 });

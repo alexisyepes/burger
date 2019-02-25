@@ -6,7 +6,7 @@
                 <img src="/assets/css/img/burgerLogo.png" id="burgerLogo">
             </div>
             <div class="col-md-7" id="topRightBox">
-                <h1 id="color-override">Make burgers, eat burgers.</h1>
+                <h1 id="mainTitle">Make burgers... eat burgers.</h1>
                 <br>
                 <panel>
                     <form class="create-form">
@@ -14,8 +14,8 @@
                             <label for="newburger" id="addBurgerLabel">Add a New Burger to the menu:</label>
                             <input type="text" id="newburger" name="burger">
                             {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-                            <button type="submit" class="btn btn-success" data-show="modal" data-target="#myModal" id="addburger"><span
-                                    class="fa fa-thumbs-up"></span></button>
+                            <button type="submit" class="btn btn-success" id="addburger"><span
+                                    class="fa fa-thumbs-up fa-3x"></span></button>
                         </div>
                     </form>
                 </panel>
@@ -27,11 +27,19 @@
     <div class="row">
         <!-- Undevoured Burgers -->
         <div class="col-md-12" id="topHead">
-            <h1 id="topHeadHeading">To devour a Burger, press the button next to the burger</h1>
-            <h2>To delete the devoured burgers, press the <span class="fa fa-trash" id="trashIcon"></span> icon next to it</h2>
+            <div class="col-md-8">
+                <h1 id="topHeadHeading">To devour a Burger, press the <i class="fas fa-utensils" id="utensilsIcon"></i>
+                    icon next to the burger.</h1>
+                <h1>To delete the devoured burgers, press the <span class="fa fa-trash" id="trashIcon"></span> icon next
+                    to it</h1>
+            </div>
+            <div class="col-md-4">
+                <img src="/assets/css/img/burgerPic.jpeg" id="burgerPic">
+            </div>
         </div>
+
         <div class="col-sm-6">
-                <div class="panel-heading" id="leftHead"><strong>New Burgers Menu</strong></div>
+            <div class="panel-heading" id="leftHead"><strong>New Burgers Menu</strong></div>
             <div class="panel panel-default" id="panelBottom">
                 <div class="panel-body" id="menuListLeft">
                     <ul>
@@ -49,7 +57,7 @@
         </div>
         <!-- Devoured Burgers -->
         <div class="col-sm-6">
-                <div class="panel-heading" id="rightHead"><strong>Devoured Burgers</strong></div>
+            <div class="panel-heading" id="rightHead"><strong>Devoured Burgers</strong></div>
             <div class="panel panel-default" id="panelBottomLeft">
                 <div class="panel-body" id="menuList">
                     <ul>
@@ -57,7 +65,7 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}} </strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-trash fa-2x"></span></button>
                         <hr>
                         {{/if}}
                         {{/each}}
@@ -70,13 +78,27 @@
 
 <footer class="page-footer black accent-2" id="footer">
 
-        <div class="footer-copyright">
-            <div class="container">
-                <h6 id="footerText"><b>© 2019 Alexis Yepes Sanabria ||| University of Toronto Bootcamp</b> <a
-                        class="grey-text text-lighten-4 right" href="https://github.com/alexisyepes/burger">
-                        <b>Code Reference</b></a>
-                </h6>
+    <div class="footer-copyright">
+        <div class="container">
+            <h6 id="footerText"><b>© 2019 Alexis Yepes Sanabria ||| University of Toronto Bootcamp</b> <a
+                    class="grey-text text-lighten-4 right" href="https://github.com/alexisyepes/burger">
+                    <b>Code Reference</b></a>
+            </h6>
 
-            </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 id="modalTitle">Your burger has been added to the Menu!</h1>
+    <img src="/assets/css/img/burgerModal.png">
+  </div>
+
+</div>
