@@ -17,5 +17,9 @@ Once a new burger is created, it will be displayed on the Menu with a button to 
 * HTML / CSS
 * Bootstrap
 
-![Screenshot](./public/assets/css/img/screenshotHome.png)
+Click the link below to see the app live:
+
+https://lit-shore-28259.herokuapp.com/
+
+
 
